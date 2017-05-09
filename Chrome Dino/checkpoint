@@ -1,2 +1,2 @@
-model_checkpoint_path: "C:\\Users\\stjzito1\\Downloads\\1493041054\\github.com\\Sentdex\\pygta5\\archive\\master\\pygta5-master\\pydino-fast-alexnetv2-alexnetv2-alexnetv2-epochs-300K-data.model"
-all_model_checkpoint_paths: "C:\\Users\\stjzito1\\Downloads\\1493041054\\github.com\\Sentdex\\pygta5\\archive\\master\\pygta5-master\\pydino-fast-alexnetv2-alexnetv2-alexnetv2-epochs-300K-data.model"
+model_checkpoint_path: "D:\\AI-GAMES\\Chrome Dino\\pydino-fast-alexnetv2-alexnetv2-alexnetv2-epochs-300K-data.model"
+all_model_checkpoint_paths: "D:\\AI-GAMES\\Chrome Dino\\pydino-fast-alexnetv2-alexnetv2-alexnetv2-epochs-300K-data.model"
