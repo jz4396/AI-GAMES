@@ -1,0 +1,3 @@
+[submodule "pygta5"]
+	path = pygta5
+	url = https://github.com/Sentdex/pygta5
