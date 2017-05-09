@@ -7,8 +7,9 @@ import time
 from getkeys import key_check
 import os
 
-def main():
+cv2.namedWindow("lel")
 
+def main():
             # 800x600 windowed mode
             screen = grab_screen(region=(400,100,1000,300))
             cv2.imshow("lel",screen)
@@ -16,7 +17,8 @@ def main():
             screen = cv2.cvtColor(screen, cv2.COLOR_BGR2GRAY)
             screen = cv2.resize(screen, (200, 68))
             cv2.imwrite("lol.jpg", screen);
-            time.sleep(10)
+            cv2.imshow("lel",screen)
+            
             print("hi")
 
 
