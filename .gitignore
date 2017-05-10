@@ -52,3 +52,6 @@ Temporary Items
 *.npy
 *.npy
 Chrome Dino/training_data_balanced.npy
+*.npy
+Chrome Dino/training_data_balanced.npy
+*.npy
