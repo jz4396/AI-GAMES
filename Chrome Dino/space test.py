@@ -2,7 +2,7 @@ from getkeys import key_check
 import time
 from directkeys import PressKey,ReleaseKey, W, A, S, D
 
-SPACE = 0x48
+SPACE = 0x39
 
 paused = False
 

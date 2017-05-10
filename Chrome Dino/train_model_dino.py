@@ -12,11 +12,7 @@ MODEL_NAME = 'pydino-fast-{1}-{1}-{1}-epochs-300K-data.model'.format(LR, 'alexne
 
 model = alexnet(WIDTH, HEIGHT, LR)
 
-if os.path.isfile(MODEL_NAME):
-    print('File exists, loading previous data!')
-    model.load(MODEL_NAME)
-else:
-    print('File does not exist, starting fresh!')
+model.load(MODEL_NAME)
 
 hm_data = 22
 for i in range(EPOCHS):
@@ -33,7 +29,7 @@ for i in range(EPOCHS):
         test_y = [i[1] for i in test]
 
         model.fit({'input': X}, {'targets': Y}, n_epoch=1, validation_set=({'input': test_x}, {'targets': test_y}), 
-            snapshot_step=10000, show_metric=True, run_id=MODEL_NAME, batch_size=1000)
+            snapshot_step=500, show_metric=True, run_id=MODEL_NAME, batch_size=1000)
 
         model.save(MODEL_NAME)
 

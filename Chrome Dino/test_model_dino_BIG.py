@@ -25,6 +25,7 @@ def Jump():
 ##        ReleaseKey(W)
 ##    else:
     PressKey(SPACE)
+    print("jumping")
     
 def noJump():
     ReleaseKey(SPACE)
@@ -44,7 +45,7 @@ def main():
         
         if not paused:
             # 800x600 windowed mode
-            screen = grab_screen(region=(400,100,1000,300))
+            screen = grab_screen(region=(980,290,1580,430))
             print('loop took {} seconds'.format(time.time()-last_time))
             last_time = time.time()
             screen = cv2.cvtColor(screen, cv2.COLOR_BGR2GRAY)
@@ -53,7 +54,7 @@ def main():
             prediction = model.predict([screen.reshape(200,68,1)])[0]
             print(prediction)
 
-            Jump_thresh = 0.50
+            Jump_thresh = 0.9
 
             if prediction[0] > Jump_thresh:
                 Jump()
