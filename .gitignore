@@ -49,3 +49,6 @@ Temporary Items
 *.data-00000-of-00001
 *.index
 *.meta
+*.npy
+*.npy
+Chrome Dino/training_data_balanced.npy

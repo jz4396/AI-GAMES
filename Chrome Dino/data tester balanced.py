@@ -1,3 +1,13 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:57cc3202bb9612a6473da8a4a46e190ce4af81d17936b00b152af53f985aa22f
-size 293
+import numpy as np
+import cv2
+
+train_data = np.load('training_data_balanced.npy')
+
+for data in train_data:
+    img = data[0]
+    choice = data[1]
+    cv2.imshow('test',img)
+    print(choice)
+    if cv2.waitKey(25) & 0xFF == ord('q'):
+        cv2.destroyAllWindows()
+        break
