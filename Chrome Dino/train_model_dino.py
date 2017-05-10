@@ -2,6 +2,8 @@
 
 import numpy as np
 from alexdino import alexnet
+import os
+
 WIDTH = 200
 HEIGHT = 68
 LR = 1e-3
@@ -9,6 +11,12 @@ EPOCHS = 10
 MODEL_NAME = 'pydino-fast-{1}-{1}-{1}-epochs-300K-data.model'.format(LR, 'alexnetv2',EPOCHS)
 
 model = alexnet(WIDTH, HEIGHT, LR)
+
+if os.path.isfile(MODEL_NAME):
+    print('File exists, loading previous data!')
+    model.load(MODEL_NAME)
+else:
+    print('File does not exist, starting fresh!')
 
 hm_data = 22
 for i in range(EPOCHS):
